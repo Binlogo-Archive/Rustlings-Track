@@ -2,20 +2,23 @@
 // Execute `rustlings hint threads1` or use the `hint` watch subcommand for a hint.
 // This program should wait until all the spawned threads have finished before exiting.
 
-// I AM NOT DONE
-
+use std::sync::{Arc, Mutex};
 use std::thread;
 use std::time::Duration;
 
 
 fn main() {
-
-    let mut handles = vec![];
-    for i in 0..10 {
-        thread::spawn(move || {
+    let status = Arc::new(Mutex::new(JobStatus { jobs_completed: 0 }));
+    let status_shared = status.clone();
+    thread::spawn(move || {
+        for _ in 0..10 {
             thread::sleep(Duration::from_millis(250));
-            println!("thread {} is complete", i);
-        });
+            status_shared.lock().unwrap().jobs_completed += 1;
+        }
+    });
+    while status.lock().unwrap().jobs_completed < 10 {
+        println!("waiting... ");
+        thread::sleep(Duration::from_millis(500));
     }
 
     let mut completed_threads = 0;
