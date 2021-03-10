@@ -1,75 +1,10 @@
-# rustlings 🦀❤️
+# Rustlings-Track
 
-Greetings and welcome to `rustlings`. This project contains small exercises to get you used to reading and writing Rust code. This includes reading and responding to compiler messages!
+This is my mrogress track of [rustlings](https://github.com/rust-lang/rustlings), 🦀 Small exercises to get you used to reading and writing Rust code!
 
-_...looking for the old, web-based version of Rustlings? Try [here](https://github.com/rust-lang/rustlings/tree/rustlings-1)_
+📎 If you are intrested, welcome to try [it](https://github.com/rust-lang/rustlings).
 
-Alternatively, for a first-time Rust learner, there are several other resources:
-
-- [The Book](https://doc.rust-lang.org/book/index.html) - The most comprehensive resource for learning Rust, but a bit theoretical sometimes. You will be using this along with Rustlings!
-- [Rust By Example](https://doc.rust-lang.org/rust-by-example/index.html) - Learn Rust by solving little exercises! It's almost like `rustlings`, but online
-
-## Getting Started
-
-_Note: If you're on MacOS, make sure you've installed Xcode and its developer tools by typing `xcode-select --install`._
-_Note: If you're on Linux, make sure you've installed gcc. Deb: `sudo apt install gcc`. Yum: `sudo yum -y install gcc`._
-
-You will need to have Rust installed. You can get it by visiting https://rustup.rs. This'll also install Cargo, Rust's package/project manager.
-
-## MacOS/Linux
-
-Just run:
-
-```bash
-curl -L https://raw.githubusercontent.com/rust-lang/rustlings/main/install.sh | bash
-# Or if you want it to be installed to a different path:
-curl -L https://raw.githubusercontent.com/rust-lang/rustlings/main/install.sh | bash -s mypath/
-```
-
-This will install Rustlings and give you access to the `rustlings` command. Run it to get started!
-
-## Windows
-
-In PowerShell (Run as Administrator), set `ExecutionPolicy` to `RemoteSigned`:
-
-```ps1
-Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
-```
-
-Then, you can run:
-
-```ps1
-Start-BitsTransfer -Source https://raw.githubusercontent.com/rust-lang/rustlings/main/install.ps1 -Destination $env:TMP/install_rustlings.ps1; Unblock-File $env:TMP/install_rustlings.ps1; Invoke-Expression $env:TMP/install_rustlings.ps1
-```
-
-To install Rustlings. Same as on MacOS/Linux, you will have access to the `rustlings` command after it.
-
-If you get a permission denied message, you might have to exclude the directory where you cloned Rustlings in your antivirus.
-
-## Browser
-
-[Run on Repl.it](https://repl.it/github/rust-lang/rustlings)
-
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/rust-lang/rustlings)
-
-## Manually
-
-Basically: Clone the repository at the latest tag, run `cargo install`.
-
-```bash
-# find out the latest version at https://github.com/rust-lang/rustlings/releases/latest (on edit 5.0.0)
-git clone -b 5.0.0 --depth 1 https://github.com/rust-lang/rustlings
-cd rustlings
-cargo install --force --path .
-```
-
-If there are installation errors, ensure that your toolchain is up to date. For the latest, run:
-
-```bash
-rustup update
-```
-
-Then, same as above, run `rustlings` to get started.
+![crab pet](https://i.imgur.com/LbZJgmm.gif)
 
 ## Doing exercises
 
@@ -124,36 +59,85 @@ rustlings list
 
 After every couple of sections, there will be a quiz that'll test your knowledge on a bunch of sections at once. These quizzes are found in `exercises/quizN.rs`.
 
-## Enabling `rust-analyzer`
+## Progress-Track
 
-Run the command `rustlings lsp` which will generate a `rust-project.json` at the root of the project, this allows [rust-analyzer](https://rust-analyzer.github.io/) to parse each exercise. 
-
-## Continuing On
-
-Once you've completed Rustlings, put your new knowledge to good use! Continue practicing your Rust skills by building your own projects, contributing to Rustlings, or finding other open-source projects to contribute to.
-
-## Uninstalling Rustlings
-
-If you want to remove Rustlings from your system, there's two steps. First, you'll need to remove the exercises folder that the install script created
-for you:
-
-```bash
-rm -rf rustlings # or your custom folder name, if you chose and or renamed it
+```
+✅ variables1
+✅ variables2
+✅ variables3
+✅ variables4
+✅ variables5
+✅ variables6
+✅ functions1
+✅ functions2
+✅ functions3
+✅ functions4
+✅ functions5
+✅ if1
+✅ if2
+✅ quiz1
+✅ move_semantics1s!
+✅ move_semantics2s!
+✅ move_semantics3s!
+✅ move_semantics4s!
+✅ primitive_types1.rs!
+✅ primitive_types2.rs!
+✅ primitive_types3.rs!
+✅ primitive_types4es4.rs
+✅ primitive_types5.rs!
+✅ primitive_types6es6.rs
+✅ structs1
+✅ structs2
+✅ structs3
+✅ enums1
+✅ enums2
+✅ enums3
+✅ modules1
+✅ modules2
+✅ collections1
+✅ collections2
+✅ collections3
+✅ collections4
+✅ strings1
+✅ strings2
+✅ quiz2
+✅ errors1
+✅ errors2
+✅ errors3
+✅ errorsn
+✅ generics1
+✅ generics2
+✅ generics3
+✅ option1
+✅ option2
+✅ result1
+✅ traits1
+✅ traits2
+✅ tests1
+✅ tests2
+✅ tests3
+✅ quiz3
+✅ box1s
+✅ arc1
+✅ iterators11.rs!
+✅ iterators2ors2.rs
+✅ iterators3ors3.rs
+✅ iterators4ors4.rs
+✅ threads1
+✅ macros1
+✅ macros2
+✅ macros3
+✅ macros4
+✅ quiz4
+⭕️ clippy1
+⭕️ clippy2
+⭕️ using_as
+⭕️ from_into
+⭕️ try_from_into
+⭕️ as_ref_mut
+⭕️ from_str
 ```
 
-Second, since Rustlings got installed via `cargo install`, it's only reasonable to assume that you can also remove it using Cargo, and
-exactly that is the case. Run `cargo uninstall` to remove the `rustlings` binary:
+## Thanks ✨
 
-```bash
-cargo uninstall rustlings
-```
-
-Now you should be done!
-
-## Contributing
-
-See [CONTRIBUTING.md](./CONTRIBUTING.md).
-
-## Contributors ✨
-
-Thanks goes to the wonderful people listed in [AUTHORS.md](./AUTHORS.md) 🎉
+All exercises source from [rustlings](https://github.com/rust-lang/rustlings)
