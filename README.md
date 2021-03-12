@@ -129,10 +129,10 @@ After every couple of sections, there will be a quiz that'll test your knowledge
 ✅ macros3
 ✅ macros4
 ✅ quiz4
-⭕️ clippy1
-⭕️ clippy2
-⭕️ using_as
-⭕️ from_into
+✅ clippy1
+✅ clippy2
+✅ using_as
+✅ from_into
 ⭕️ try_from_into
 ⭕️ as_ref_mut
 ⭕️ from_str
