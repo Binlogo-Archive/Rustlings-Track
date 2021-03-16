@@ -133,7 +133,7 @@ After every couple of sections, there will be a quiz that'll test your knowledge
 ✅ clippy2
 ✅ using_as
 ✅ from_into
-⭕️ try_from_into
+✅ try_from_into
 ⭕️ as_ref_mut
 ⭕️ from_str
 ```
