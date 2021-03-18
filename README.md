@@ -134,7 +134,7 @@ After every couple of sections, there will be a quiz that'll test your knowledge
 ✅ using_as
 ✅ from_into
 ✅ try_from_into
-⭕️ as_ref_mut
+✅ as_ref_mut
 ⭕️ from_str
 ```
 
