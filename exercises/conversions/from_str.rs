@@ -15,21 +15,6 @@ struct Person {
     age: usize,
 }
 
-// We will use this error type for the `FromStr` implementation.
-#[derive(Debug, PartialEq)]
-enum ParsePersonError {
-    // Empty input string
-    Empty,
-    // Incorrect number of fields
-    BadLen,
-    // Empty name field
-    NoName,
-    // Wrapped error from parse::<usize>()
-    ParseInt(ParseIntError),
-}
-
-// I AM NOT DONE
-
 // Steps:
 // 1. If the length of the provided string is 0, an error should be returned
 // 2. Split the given string on the commas present in it
@@ -46,6 +31,22 @@ enum ParsePersonError {
 impl FromStr for Person {
     type Err = ParsePersonError;
     fn from_str(s: &str) -> Result<Person, Self::Err> {
+        if s.is_empty() {
+            return Err("s is empty".to_string());
+        }
+        let mut elements = s.split(",");
+        if let Some(name) = elements.by_ref().next() {
+            if name.is_empty() {
+                return Err("name is empty".to_string());
+            }
+            if let Some(age_str) = elements.by_ref().next() {
+                if let Ok(age) = age_str.parse::<usize>() {
+                    let name = name.into();
+                    return Ok(Person { name, age });
+                }
+            }
+        }
+        return Err("missing element".to_string());
     }
 }
 
