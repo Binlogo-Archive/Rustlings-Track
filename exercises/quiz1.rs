@@ -9,7 +9,7 @@
 // the price of an order of apples given the quantity bought. No hints this time!
 
 // Put your function here!
-fn calculate_apple_price(count: u64) -> u64 {
+fn calculate_price_of_apples(count: u64) -> u64 {
     if count > 40 {
         1 * count
     } else {
